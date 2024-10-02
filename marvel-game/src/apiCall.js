@@ -9,7 +9,7 @@ export default async function apiCall() {
     const hash = await hashing(timestamp);
     console.log("Hash:", hash);
 
-    const response = await fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${timestamp}&apikey=${PUBLIC_KEY}&hash=${hash}`, {
+    const response = await fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=${PUBLIC_KEY}&hash=${hash}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
