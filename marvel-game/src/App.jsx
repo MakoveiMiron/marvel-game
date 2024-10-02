@@ -5,10 +5,11 @@ function App() {
 
   async function api(){
     const characters = await apiCall()
-    return characters
+    
+    console.log(characters)
   }
 
-  console.log(api())
+  api()
 
   return (
     <>
