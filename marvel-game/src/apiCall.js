@@ -1,21 +1,23 @@
 import hashing from "./hashing";
-import { PUBLIC_KEY } from './constans'
+import { PUBLIC_KEY } from './constans'; 
 
-export default async function apiCall(){
+export default async function apiCall() {
+    
+    const timestamp = Date.now();
+    console.log('Timestamp:', timestamp);
 
-    const timestamp = Date.now()
-    console.log(timestamp)
+    const hash = await hashing(timestamp);
+    console.log("Hash:", hash);
 
-    //const hash = await hashing(timestamp)
-
-    const characters = await fetch(`https://gateway.marvel.com:443/v1/public/characters?apikey=${PUBLIC_KEY}`,  {
+    const response = await fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${timestamp}&apikey=${PUBLIC_KEY}&hash=${hash}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
         }
-    })
-    .then(resp => {resp.json} )
-    .then(data => { return data})
+    });
 
-    return characters
+    const data = await response.json();
+    console.log('Data:', data);
+
+    return data;
 }

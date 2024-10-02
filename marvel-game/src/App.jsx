@@ -6,7 +6,7 @@ function App() {
   async function api(){
     const characters = await apiCall()
     
-    console.log(characters)
+    console.log("characters", characters)
   }
 
   api()
