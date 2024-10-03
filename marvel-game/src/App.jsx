@@ -84,7 +84,7 @@ function App() {
           {!gameStarted && (
             <div className="rules">
               <h2>Memory Game Rules</h2>
-              <p>Welcome to the Memory Game! Your objective is to match pairs of cards by flipping them over. You will have 16 cards in total, arranged in a 4x4 grid. Each card has a matching pair hidden underneath. Take turns flipping two cards at a time. If you find a matching pair, those cards will remain flipped and you will earn points. If the cards do not match, they will flip back over after a brief moment. Be strategic and remember the locations of the cards that you have already flipped over. The game ends when you successfully match all pairs. Good luck, and may the best memory win!</p>
+              <p>Welcome to the Memory Game! Your objective is to match pairs of cards by flipping them over. You will have 36 cards in total, arranged in a 6x6 grid. Each card has a matching pair hidden underneath. Take turns flipping two cards at a time. If you find a matching pair, those cards will remain flipped and you will earn points. If the cards do not match, they will flip back over after a brief moment. Be strategic and remember the locations of the cards that you have already flipped over. The game ends when you successfully match all pairs. Good luck, and may the best memory win!</p>
               {characters.length > 0 ? <button onClick={startGame}>Start Game</button> : <button>Fetching data for the cards...</button>}
             </div>
           )}
