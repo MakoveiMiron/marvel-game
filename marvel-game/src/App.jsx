@@ -89,7 +89,7 @@ function App() {
             </div>
           )}
           {(gameStarted && !gameCompleted) && (
-            <div>
+           
               <div className='grid'>
                 {gridItems.map((item, index) => (
                   <div
@@ -105,7 +105,7 @@ function App() {
                   </div>
                 ))}
               </div>
-            </div>
+            
           )}
           {gameCompleted && (
             <div className="completed">
