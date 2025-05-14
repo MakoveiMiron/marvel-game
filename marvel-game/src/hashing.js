@@ -4,8 +4,6 @@ import { PUBLIC_KEY, PRIVATE_KEY } from './constans'
 
 export default function hashing(timestamp){
 
-    console.log(`${timestamp}${PRIVATE_KEY}${PUBLIC_KEY}`)
-
     const stringToHash = `${timestamp}${PRIVATE_KEY}${PUBLIC_KEY}`; 
 
     
